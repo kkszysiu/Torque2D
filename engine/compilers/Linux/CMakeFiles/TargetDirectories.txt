@@ -1,1 +1,0 @@
-/home/kkszysiu/Projekty/gry/Torque2D/engine/compilers/Linux/CMakeFiles/Torque2D.dir
