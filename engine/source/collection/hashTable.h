@@ -27,6 +27,8 @@
 #include "platform/platform.h"
 #include "string/stringTable.h"
 
+#include <inttypes.h>
+
 namespace Hash
 {
 //-Mat this was copied from StringTable
@@ -41,7 +43,11 @@ namespace Hash
 
    inline U32 hash(const void *data)
    {
+#ifdef linux
+      return (intptr_t)data;
+#else
       return (U32)data;
+#endif
    }
 
    U32 nextPrime(U32);
